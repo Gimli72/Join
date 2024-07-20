@@ -1,0 +1,240 @@
+@keyframes slideIn {
+    from {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        width: 275px;
+        height: 335px;
+    }
+
+    to {
+        position: absolute;
+        left: 77px;
+        top: 80px;
+        transform: translate(0%, 0%);
+        width: 100px;
+        height: 122px;
+    }
+}
+
+@keyframes slideInMobile {
+    from {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        width: 100px;
+        height: 122px;
+    }
+
+    to {
+        position: absolute;
+        left: 38px;
+        top: 37px;
+        transform: translate(0%, 0%);
+        width: 64px;
+        height: 78px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+@keyframes fadeInColor {
+    from {
+        fill: white;
+    }
+
+    to {
+        fill: black;
+    }
+}
+
+.logoAnimation {
+    animation: slideIn 500ms forwards;
+    animation-delay: 125ms;
+}
+
+.logoAnimationMobile {
+    animation: slideInMobile 500ms forwards;
+    animation-delay: 125ms;
+}
+
+.bg-logo {
+    animation: fadeIn 500ms forwards;
+    animation-delay: 125ms;    
+}
+
+.bgLogoMobile {
+    animation: fadeInColor 500ms forwards;
+    animation-delay: 125ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideRightIn {
+    from {
+        left: 100%;
+        opacity: 0.8;
+    }
+
+    to {
+        left: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideRightOut {
+    from {
+        left: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        left: 100%;
+        opacity: 0.5;
+    }
+}
+
+.sliderRightIn {
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slideRightIn 350ms forwards;
+}
+
+.sliderRightOut {
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slideRightOut 350ms;
+}
+
+@keyframes slideInFromBottom {
+    from {
+        bottom: 0%;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideOutFromBottom {
+    from {
+        bottom: 50%;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.slideInFromBottom {
+    position: absolute; 
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-100%);
+    animation: slideInFromBottom 350ms forwards;
+}
+
+.slideOutFromBottom {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-100%);
+    animation: slideOutFromBottom 350ms forwards;
+}
+
+@keyframes slideUserDetails {
+    from {
+        transform: translate(300px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translate(0px);
+        opacity: 1;        
+    }
+}
+
+.slideUserDetails {
+    animation: slideUserDetails 125ms forwards;   
+}
+
+@keyframes slideHeaderMenuMobil {
+    from {
+        transform: translate(185px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+.slideHeaderMenuMobil {
+    animation: slideHeaderMenuMobil 125ms forwards;
+}
+
+@keyframes slideOutHeaderMenuMobil {
+    from {
+        transform: translate(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(185px);
+        opacity: 0.5;
+    }
+}
+
+.slideOutHeaderMenuMobil {
+    animation: slideOutHeaderMenuMobil 125ms forwards;
+}
+
+@keyframes slideEditDeleteMenuMobil {
+    from {
+        transform: translateY(140px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.slideEditDeleteMenuMobil {
+    animation: slideEditDeleteMenuMobil 125ms forwards;
+}
+/* 
+@keyframes slideOutEditDeleteMenuMobil {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(140px);
+    }
+}
+
+.slideEditDeleteMenuMobil {
+    animation: slideOutEditDeleteMenuMobil 125ms forwards;
+} */

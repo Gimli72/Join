@@ -1,0 +1,243 @@
+.m-0 {
+    margin: 0;
+}
+
+.mt-16 .black {
+    color: #000;
+}
+
+.global-color-prime {
+    color: var(--globalColorPrime);
+}
+
+.edit:hover path {
+    fill: var(--globalColorSecond);
+}
+
+.edit:hover span {
+    color: var(--globalColorSecond);
+}
+
+.delete:hover path {
+    fill: var(--globalColorSecond);
+}
+
+.delete:hover span {
+    color: var(--globalColorSecond);
+}
+
+.global-color-second {
+    color: var(--globalColorSecond);
+}
+
+.gray {
+    color: rgb(209, 209, 209);
+}
+
+.white {
+    color: #fff;
+}
+
+.light-blue {
+    color: var(--globalColorSecond);
+}
+
+.email-link {
+    color: var(--email-color);
+}
+
+.text-12px {
+    font-size: 12px;
+}
+
+.text-14px {
+    font-size: 14px;
+}
+
+.text-16px {
+    font-size: 16px;
+}
+
+.text-20px {
+    font-size: 20px;
+}
+
+.text-21px {
+    font-size: 21px;
+}
+
+.text-27px {
+    font-size: 27px;
+}
+
+.text-36px {
+    font-size: 36px;
+}
+
+.text-47px {
+    font-size: 47px;
+}
+
+.text-61px {
+    font-size: 61px;
+}
+
+.text-64px {
+    font-size: 64px;
+}
+
+.text-normal-400 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.text-normal-500 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.text-normal-600 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.text-normal-700 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.text-primary-gray {
+    color: #d1d1d1;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.text-small-gray {
+    color: #a8a8a8;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.text-small-gray:hover {
+    color: var(--globalColorSecond);
+}
+
+.text-small-black {
+    color: black;
+    padding: 8px;
+}
+
+.position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.gap-4 {
+    gap: 4px;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-11 {
+    gap: 11px;
+}
+
+.gap-13 {
+    gap: 13px;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-18 {
+    gap: 18px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-21 {
+    gap: 21px;
+}
+
+.gap-22 {
+    gap: 22px;
+}
+
+.gap-24 {
+    gap: 24px;
+}
+
+.gap-25 {
+    gap: 25px;
+}
+
+.gap-26 {
+    gap: 26px;
+}
+
+.gap-30 {
+    gap: 30px;
+}
+
+.gap-32 {
+    gap: 32px;
+}
+
+.gap-35 {
+    gap: 35px;
+}
+
+.gap-54 {
+    gap: 54px;
+}
+
+.gap-72 {
+    gap: 72px;
+}
+
+.break-word {
+    word-wrap: break-word;
+}

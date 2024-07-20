@@ -1,0 +1,416 @@
+@import url('./style.css');
+@import url('./modules/container.css');
+@import url('./modules/button.css');
+@import url('./modules/typography.css');
+@import url('./modules/layout.css');
+@import url('./modules/taskTyle.css');
+@import url('./addTask.css');
+@import url('./templates/card-overlay.css');
+
+
+/* ---------------------------- */
+/* deklaration globale-variable */
+/* ---------------------------- */
+:root {
+    --scrollBarWidth: 10px;
+}
+
+
+html, body {
+    /* background-color: var(--globalBgColor); */
+    overflow: hidden;
+}
+
+
+/* ---------------------- */
+/* -- custom scrollbar -- */
+/* ---------------------- */
+::-webkit-scrollbar {
+    width: var(--scrollBarWidth);
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: var(--scrollBarWidth);
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+
+/* @import url('./modules/form.css'); */
+/* @import url('./animation.css'); */
+
+html, .container {
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    max-width: 1440px;
+    max-height: 1024px;
+    background-color: var(--globalBgColor);
+    z-index: 9;
+}
+
+
+main {
+    background-color: var(--globalBgColor);
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--globalBgColor);
+    margin: 50px;
+}
+
+
+#boardLabel {
+    height: 60px;
+}
+
+
+/* ---------------------- */
+/* -- boardInput field -- */
+/* ---------------------- */
+.boardInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    align-self: stretch;
+    color: rgb(132,132,132); /* placeholder */
+
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 24px */
+
+    padding: 12px 21px;
+    border-radius: 10px;
+    border: 1px solid var(--Style, #D1D1D1);
+    background: #FFF;
+
+    cursor: pointer;
+}
+
+
+/* change border color of input on focus */
+.boardInput:focus {
+    /* border: none; */
+    /* outline: none !important; */
+    border: solid 1px var(--globalColorSecond) !important;
+}
+
+
+#boardFilter { 
+    color:#000; /* text color when edit*/
+    border: none;
+    outline: none;
+    font-size: 20px;
+
+}
+
+
+h3 {
+    padding-left: 10px;
+}
+
+
+.boardStateLabel {
+    color: var(--menu-color, #42526E);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 24px */
+}
+
+
+.plusBtn {
+    display: flex;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 3px solid #2A3647;
+}
+
+
+.dragAndDropArea {
+    display: flex;
+    flex-direction: row;
+    column-gap: 32px;
+}
+
+
+.dragAndDropArea h3 {
+    display: flex;
+    width: 250px;
+    color: var(--txt-color);
+}
+
+
+.vert-sroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 700px;
+}
+
+
+.container-board {
+    /* height: 100vh; */
+    width: 252px;
+    /* background-color: red; */
+    /* border: solid 1px red; */
+}
+
+
+.task-category {
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    width: max-content;
+    color: white;
+}
+
+
+.classHeaderBlue {
+    background: #0038FF;
+}
+
+
+.classHeaderGreen {
+    background: #1FD7C1;
+}
+
+
+.title {
+    padding-bottom: 10px;
+}
+
+
+h4 {
+    padding-top: 18px;
+    padding-bottom: 5px;
+}
+
+
+.task-description {
+    color: rgb(168,168,168);
+}
+
+
+.d-none {
+    display: none;
+}
+
+
+/* ------------------------------------------------- */
+/* tgreff, 11-02-2024 | showAddTaskOverlay to board.html */
+/* ------------------------------------------------- */
+@keyframes openAddTaskOverlay {
+    from {
+        left: 100%;
+        display: none;
+        opacity: 0;
+    }
+    to {
+        left: calc( 50% - 572px);
+        opacity: 1;
+        z-index: 10;
+        display: block;
+    }
+}
+
+
+@keyframes closeAddTaskOverlay {
+    from {
+        left: calc( 50% - 572px);
+        opacity: 1; 
+        z-index: 10;
+        display: block;
+    }
+    to {
+        left: 100%;
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+#showAddTaskOverlay {
+    position: absolute;
+    background-color: var(--globalBgColor);
+    left: 100%; 
+    border: solid 1px var(--globalInputBorderColor);
+    border-radius: 50px;
+}
+
+
+.showAddTaskOverlay {
+    display: flex;
+    animation-name: openAddTaskOverlay;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+
+.hideAddTaskOverlay {
+    display: flex;
+    animation-name: closeAddTaskOverlay;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+
+/* ---------------------------------------------- */
+/* tgreff, 01-03-2024 | taskOverlay to board.html */
+/* ---------------------------------------------- */
+
+
+@keyframes openTaskOverlay {
+    from {
+        left: 100%;
+        display: none;
+        opacity: 0;
+    }
+    to {
+        left: calc( 50% - 222px);
+        opacity: 1;
+        z-index: 10;
+        display: block;
+    }
+}
+
+
+@keyframes closeTaskOverlay {
+    from {
+        left: calc( 50% - 222px);
+        opacity: 1; 
+        z-index: 10;
+        display: block;
+    }
+    to {
+        left: 100%;
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+#taskOverlay {
+    position: absolute;
+    background-color: rgb(246, 247, 248, 1);
+    left: 100%; 
+    border: solid 1px var(--globalInputBorderColor);
+    border-radius: 50px;
+    width: 100%;
+    max-width: 440px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/*  */
+.taskOverlay {
+    width: 445px;
+    max-width: 445px;
+    min-height: max-content;
+    border-radius: 30px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+    padding: 48px 40px;
+}
+
+
+.showTaskOverlay {
+    display: flex;
+    animation-name: openTaskOverlay;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+
+.hideTaskOverlay {
+    display: flex;
+    animation-name: closeTaskOverlay;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+
+/* -------------------------------------------------- */
+/* tgreff, 13-03-2024 | style delete and edit btn     */
+/* -------------------------------------------------- */
+.cardOverlayDelete:hover .cardOverlayDeleteIcon,
+.cardOverlayDelete:hover .cardOverlayDeleteText {
+    fill: #29ABE2;
+    color: #29ABE2;
+}
+
+
+/* -------------------------------------------------- */
+/* tgreff, 13-03-2024 | shake taskTiles in board.html */
+/* -------------------------------------------------- */
+
+@keyframes shakeCard{
+    0% { -webkit-transform : rotate(2deg); }
+    50% { -webkit-transform : rotate(-2deg); }
+}
+
+.card:hover {
+    animation-name: shakeCard;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    #openAddTaskOverlay {
+        display: none;
+    }
+
+    #boardLabel {
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .boardInput {
+        margin-top: 20px;
+    }
+
+    .dragAndDropArea {
+        flex-direction: column;
+    }
+
+    .content {
+        overflow: scroll;
+    }
+
+    .taskContainer {
+        margin-bottom: 50px;
+    }
+
+    .container-board {
+        flex-direction: row !important;
+    }
+}

@@ -1,0 +1,114 @@
+@import url('../style/modules/sidebar.css');
+@import url('../style/modules/header.css');
+
+@font-face {
+    /* --- font | inter-font from google fonts --- */
+    font-family: Inter;
+    src: url(../font/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+    /* --- root | basstyle | declaration global-vars --- */
+    --globalFontFamily: 'Inter';
+    --globalFontSize: 23px;
+    --globalBgColor: rgb(246, 247, 248, 1);
+    --globalHtmlBgColor: rgb(245, 245, 245, 1);
+    --globalColorPrime: rgba(42, 54, 71, 1);
+    --globalColorSecond: rgba(41, 171, 226, 1);
+    --globalColorThird: rgba(9, 25, 49, 1);
+    --globalInputBorderColor: rgb(209, 209, 209, 1);
+
+    --heightHeader: 80px;
+    --heightHeaderMobil: 85px;
+    --widthSideBar: 232px;
+    --ligth-blue: #29abe2;
+    --txt-color: rgb(42, 54, 71);
+    --txt-color-required: rgb(255, 135, 175);
+    --txt-color-hover: rgba(255, 255, 255, 1);
+    --side-bar-color: rgb(42, 54, 71);
+    --side-bar-hover: rgb(41, 61, 89, 1);
+    --header-color: rgb(255, 255, 255, 1);
+    --email-color: rgb(0, 124, 238);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--globalFontFamily);
+}
+
+
+html {
+    background-color: #000;
+}
+
+
+body {
+    /* visibility: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--globalHtmlBgColor);
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 1024px;
+    background-color: var(--globalBgColor);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - var(--widthSideBar));
+    height: 1024px;
+}
+
+
+.mainContent {
+    /* border: solid 1px yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+section {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.label1 {
+    margin-bottom: 20px;
+}
+
+.user-overview-user-circle {
+    width: 42px;
+    height: 42px;
+}
+
+@media (max-width: 420px) {
+
+    /* body {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    } */
+}

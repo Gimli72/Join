@@ -1,0 +1,89 @@
+.card {
+    width: 220px;
+    min-height: max-content;
+    border-radius: 24px;
+    background: var(--white, #FFF);
+    cursor: move;
+    box-shadow: inset 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+}
+
+
+.emptyCard {
+    width: auto;
+    min-height: max-content;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 4px 2px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px dashed var(--icon, #A8A8A8);
+    background: #E7E7E7;
+    text-align: center;
+    color: rgba(168, 168, 168, 1);
+}
+
+.container-board.dragging {
+    opacity: .5;
+}
+
+
+.classHeader {
+    padding: 4px 16px;
+    border-radius: 8px;
+    /* Muss später raus */
+    background: #0038FF;
+    width: max-content;
+    color: white;
+}
+
+
+.headerTagOverlay {
+    color: white;
+    font-family: Inter;
+    max-height: 20px;
+    font-style: normal;
+}
+
+
+.classHeaderBlue {
+    background: #0038FF;
+}
+
+
+.classHeaderGreen {
+    background: #1FD7C1;
+}
+
+
+.progressBarContainer {
+    width: 120px;
+}
+
+
+.progressBarBg {
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #F4F4F4;
+    height: 6px;
+    z-index: 0;
+    border-radius: 4px;
+}
+
+.progressBar {
+    left: 0;
+    top: 0;
+    background-color: #4589FF;
+    width: 0%;
+    height: 6px;
+    z-index: 10;
+    border-radius: 4px;
+}
+
+.cardInitialeImg {
+    margin-left: -15px;
+}
+
+.cardInitialePrio {
+    padding: 10px 4px;
+}

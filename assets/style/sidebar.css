@@ -1,0 +1,36 @@
+:root { /* --- root | basstyle | declaration global-vars --- */
+    --heightHeader: 80px;
+    --widthSideBar: 232px;
+    --ligth-blue: #29ABE2;
+    --txt-color: #2A3647;
+    --txt-color-hover: rgba(255, 255, 255, 1);
+    --side-bar-color: rgb(42,54,71);
+    --header-color: rgb(255,255,255,1);
+}
+
+/* #placeholderHeader {
+    display: flex;
+    height: var(--heightHeader);
+    background-color: var(--header-color);
+    justify-content: space-between;
+    align-items: center;    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+    color: #000;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    padding-left: calc(348px - var(--widthSideBar));
+    padding-right: 40px;
+} */
+
+
+/* .sideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: var(--widthSideBar);
+    background-color: var(--side-bar-color);
+    cursor: pointer;
+} */

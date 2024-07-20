@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Sign-up</title>
+    <link rel="stylesheet" href="./assets/style/login.css">
+    <script type="module" src="./assets/script/sign-up.js"></script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="headerSignUp">
+            <div class="logoSignUp">
+                <img class="logoSignUpLogo" src="./assets/img/joinIntroLogo.svg" alt="Join Logo Intro"/>
+            </div>
+        </div>
+        <div class="session">
+            <a href="./login.html"><img src="./assets/img/arrow-left-line.svg" class="content-header-arrow"></a>
+            <form id="sign-up-form" class="content gap-32">
+                <div class="content-header">
+                    <span class="text-normal-700 text-61px content-header-title">Sign up</span>
+                    <svg class="content-header-title-underline" xmlns="http://www.w3.org/2000/svg" width="154" height="3" viewBox="0 0 154 3" fill="none">
+                        <path d="M152 1.5L2 1.5" stroke="#29ABE2" stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <div class="content-form">
+                    <div class="inputFields">
+                        <div class="form-input relative pb-24">
+                            <input id="name" type="text" placeholder="Name" autocomplete="name"
+                                class="form-input-text text-20px text-normal-400">
+                            <img src="./assets/img/person.svg" alt="" class="form-input-img">
+                        </div>
+                        <div class="flex flex-col justify-start w-full pb-4 relative">
+                            <div class="form-input">
+                                <input id="email" type="email" placeholder="Email" autocomplete="email"
+                                    class="form-input-text text-20px text-normal-400">
+                                <img src="./assets/img/mail.svg" alt="" class="form-input-img">
+                            </div>
+                            <span id="notValidEmail" class="error-message done">Please enter a valid email address.</span>
+                        </div>
+                        <div class="flex flex-col justify-start w-full pb-4">
+                            <div class="form-input" id="passwordTest">
+                                <input id="password" type="password" placeholder="Password" autocomplete="new-password"
+                                    class="form-input-text text-20px text-normal-400">
+                                <img id="passwordImg" src="./assets/img/lock.svg" alt="" class="form-input-img">
+                            </div>
+                            <span id="passwordTooShort" class="error-message done">Ups! The password must be longer than 8
+                                characters.</span>
+                        </div>
+                        <div class="flex flex-col justify-start w-full pb-4">
+                            <div class="form-input">
+                                <input id="confirmPassword" type="password" placeholder="Confirm Password"
+                                    autocomplete="new-password" class="form-input-text text-20px text-normal-400">
+                                <img id="confirmPasswordImg" src="./assets/img/lock.svg" alt="" class="form-input-img">
+                            </div>
+                            <span id="passwordDoNotMatch" class="error-message done">Oops! The passwords do not
+                                match.</span>
+                        </div>
+                    </div>
+                    <div class="form-checkbox-pp">
+                        <input id="checkbox" type="checkbox" name="checkbox" class="form-checkbox-input">
+                        <span class="text-16px text-normal-400 text-small-black">I accept the <span
+                                class="form-checkbox-pp-span privacyPolicy">Privacy policy</span></span>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <input type="submit" value="Sign up" id="submit" class="submit btn btn-primary-dark-disabled"
+                        disabled="true">
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="text-16px text-normal-400 text-small-gray pointer privacyPolicy">Privacy Policy</div>
+            <div class="text-16px text-normal-400 text-small-gray pointer legalNotice">Legal notice</div>
+        </div>
+    </div>
+    <div class="absolute shortInfoMessageBg blur d-none" id="shortInfoMessageBg">
+        <div class="relative shortInfoMessage" id="shortInfoMessage">
+            <p class="text-normal-400 text-20px white" id="shortInfoMessageText">Text</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+.cardOverlaySubtasks:hover {
+    background-color: var(--globalInputBorderColor);
+    border-radius: 5px;
+}

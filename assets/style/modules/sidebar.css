@@ -1,0 +1,118 @@
+.sideBarMobil {
+    display: none;
+}
+
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: var(--widthSideBar);
+    background-color: var(--side-bar-color);
+    font-size: 16px;
+
+}
+
+.sideBarLogo {
+    margin-top: 64px;
+}
+
+.sideBarMenu {
+    width: 100%;
+    max-width: 100%;
+    color: #CDCDCD;
+}
+
+.sideBarMenu>span {
+    min-width: 120px;
+    height: 30px;
+}
+
+.sideBarLinks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0;
+    padding-left: 56px;
+}
+
+.sideBarLinks:hover {
+    background-color: var(--side-bar-hover);
+}
+
+.sideBarAktiv {
+    background-color: var(--globalColorThird);
+}
+
+.menuBottom {
+    color: #A8A8A8;
+    margin-top: 243px;
+    margin-bottom: 64px;
+    width: 100%;
+    text-align: center;
+}
+
+.menuBottomItemAktive {
+    width: 100%;
+    padding: 8px 0;
+    background-color: var(--globalColorThird);
+}
+
+.menuBottomItem {
+    width: 100%;
+    padding: 8px 0;
+    color: #CDCDCD;
+}
+
+.menuBottomItem:hover {
+    color: var(--globalColorSecond);
+}
+
+@media (max-width: 830px) {
+
+    .sideBarMobil {
+        background-color: #2A3647;
+        width: calc(100% - 32px);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        color: #CDCDCD;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4px;
+
+        
+        z-index: 99;
+    }
+
+    .sideBarMobil>p {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0;
+    }
+
+    .sideBar {
+        display: none;
+    }
+
+    .sideBarItemMobil {
+        display: flex;
+        width: 80px;
+        height: 76px;
+        padding: 8px 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+    }
+}

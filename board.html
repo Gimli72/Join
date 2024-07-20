@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Board</title>
+    <link rel="shortcut icon" href="./assets/img/joinFavIcon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style/board.css">
+    <script type="module" src="./assets/script/board.js"></script>
+</head>
+
+<body>
+    <div class="container done" id="container">
+        <div id="includeSideBar"></div>
+        <main>
+            <div id="includeHeader"></div>
+            <div class="content" id="content">
+                <div id="boardLabel" class="label flex justify-between w-full">
+                    <span id="boardLabelTxt" class="boardLabelTxt">Board</span>
+                    <div class="flex gap-32">
+                        <div id="boardInput" class="boardInput gap-16 pointer">
+                            <input id="boardFilter" type="text" class="pointer" placeholder="Find Task">
+                            <img src="./assets/img/boardImg/boardSeparator.svg">
+                            <img src="./assets/img/boardImg/searchIcon.svg">
+                        </div>
+                        <button id="openAddTaskOverlay" class="btn-primary-dark pointer">Add Task +</button>
+                    </div>
+                </div>
+
+                <div class="dragAndDropArea">
+                    <div class="taskContainer">
+                        <div class="flex justify-between item-center pl-8 pr-8 mb-16">
+                            <span class="boardStateLabel">To do</span>
+                            <img id="todoAddTaskBtn" class="plusBtn pointer" src="./assets/img/boardImg/addBtn.svg">
+                        </div>
+                        <div id="todo" class="flex flex-col gap-16 vert-sroll container-board"></div>
+                    </div>
+                    <div class="taskContainer">
+                        <div class="flex justify-between item-center pl-8 pr-8 mb-16">
+                            <span class="boardStateLabel">In progress</span>
+                            <img id="progressAddTaskBtn" class="plusBtn pointer" src="./assets/img/boardImg/addBtn.svg">
+                        </div>
+                        <div id="progress" class="flex flex-col gap-16 vert-sroll container-board"></div>
+                    </div>
+                    <div class="taskContainer">
+                        <div class="flex justify-between item-center pl-8 pr-8 mb-16">
+                            <span class="boardStateLabel">Await Feedback</span>
+                            <img id="feedbackAddTaskBtn" class="plusBtn pointer" src="./assets/img/boardImg/addBtn.svg">
+                        </div>
+                        <div id="feedback" class="flex flex-col gap-16 vert-sroll container-board"></div>
+                    </div>
+                    <div class="taskContainer">
+                        <div class="flex justify-between item-center pl-8 pr-8 mb-16">
+                            <span class="boardStateLabel">Done</span>
+                        </div>
+                        <div id="done" class="flex flex-col gap-16 vert-sroll container-board"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- addTaskOverlay to board.html -->
+    <div id="showAddTaskOverlay" class="hideAddTaskOverlay"></div>
+
+    <!-- taskOverlay to board.html -->
+    <div id="taskOverlay" class="taskOverlay flex flex-col gap-24"></div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Contacts</title>
+    <link rel="shortcut icon" href="./assets/img/joinFavIcon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style/contacts.css">
+    <script type="module" src="./assets/script/contacts.js"></script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div id="includeSideBar"></div>
+        <div class="relative w-full">
+            <div id="includeHeader"></div>
+            <div class="content flex" id="content"></div>
+        </div>
+    </div>
+    <!-- Add New Contacts -->
+    <div class="absolute w-screen h-screen blur done" id="addContacts">
+        <div class="overlay-contact absolute flex w-full h-full" id="addContactsSlider"></div>
+    </div>
+    <!-- Edit Contacts -->
+    <div class="absolute w-screen h-screen blur done" id="editContacts">
+        <div class="overlay-contact absolute flex position-center w-full h-full" id="editContactsSlider"></div>
+    </div>
+</body>
+</html>

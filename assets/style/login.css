@@ -1,0 +1,444 @@
+@import url('./modules/container.css');
+@import url('style.css');
+@import url('./modules/button.css');
+@import url('./modules/typography.css');
+@import url('./modules/form.css');
+@import url('./animation.css');
+@import url('./modules/layout.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--globalFontFamily);
+
+}
+
+.done {
+    visibility: hidden;
+}
+
+.header,
+.headerSignUp {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: fit-content;
+}
+
+.sign-up {
+    z-index: 21;
+}
+
+/* Wird für die Animation gebraucht */
+.bg-logo {
+    position: absolute;
+    background-color: var(--globalBgColor);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    width: 275px;
+    height: 335px;
+    z-index: 1;
+}
+
+.logoSignUpLogo {
+    max-width: 100px;
+    max-height: 122px;
+}
+
+.logoSignUp {
+    position: absolute;
+    left: 77px;
+    top: 80px;
+    transform: translate(0%, 0%);
+    width: 100px;
+    height: 122px;
+}
+
+/* .logo {
+    position: absolute;
+    left: 77px;
+    top: 80px;
+    transform: translate(0, 0);
+    width: 100px;
+    height: 122px;
+} */
+
+.logo>img {
+    height: 100%;
+    width: 100%;
+}
+
+.sign-up {
+    margin-top: 67px;
+    margin-right: 122px;
+    height: max-content;
+}
+
+.session {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 20;
+}
+
+.content {
+    height: fit-content;
+    width: 397px;
+    padding: 48px 115px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+}
+
+.content>div {
+    display: flex;
+    align-items: center;
+}
+
+.content-header {
+    flex-direction: column;
+    gap: 16px
+}
+
+.content-header-arrow {
+    position: absolute;
+    left: 48px;
+    top: 64px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.content-header-arrow:hover {
+    background-color: #eeeeee;
+    border-radius: 50%;
+}
+
+.content-form {
+    flex-direction: column;
+    width: 422px;
+    /* z-index: 10; */
+}
+
+.inputFields {
+    width: 100%;
+}
+
+.form-input-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+}
+
+.error-message {
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    color: #FF8190;
+    margin-top: 5px;
+}
+
+/* Standard */
+.form-input-text {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 60px 12px 21px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    outline: none;
+}
+
+.form-input-text:focus {
+    border-color: var(--globalColorSecond);
+}
+
+/* Standard */
+.form-input-text::placeholder {
+    color: #D1D1D1;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+/* Standard */
+.form-input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Standard */
+.form-input-img {
+    position: absolute;
+    right: 20px;
+}
+
+/* Standard */
+#form-input-img-click {
+    position: absolute;
+    right: 20px;
+}
+
+/* Standard */
+#form-input-img-click:hover {
+    cursor: pointer;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    padding-right: 196px;
+}
+
+.form-checkbox-pp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    /* margin-top: -10px; */
+}
+
+.form-checkbox-pp-span {
+    cursor: pointer;
+    color: var(--globalColorSecond);
+}
+
+.form-checkbox-pp-span:hover {
+    text-decoration: underline;
+}
+
+
+.form-checkbox-input {
+    width: 24px;
+    height: 24px;
+    border: 3px solid black;
+    z-index: 50;
+}
+
+.form-checkbox-input:hover {
+    padding: 4px;
+}
+
+
+
+.content-form-checkbox {
+    display: flex;
+}
+
+
+
+/* Standard */
+.form-text-img {
+    background-image: url('../img/mail.svg');
+    background-repeat: no-repeat;
+    background-position: right 21px center;
+}
+
+/* Standard */
+.form-password-img {
+    background-image: url('../img/visibility_off.svg');
+    background-repeat: no-repeat;
+    background-position: right 21px center;
+}
+
+.content-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+.footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    z-index: 30;
+}
+
+.shortInfoMessage {
+    display: flex;
+    height: 74px;
+    padding: 10px 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    max-width: fit-content;
+    background: var(--globalColorPrime);
+    box-shadow: 0px 0px 4px 0px rgb(42, 7, 7, 0.15);
+    bottom: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blur {
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+.shortInfoMessageBg {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+@media (max-width: 830px) {
+
+    body {
+        background-color: var(--globalBgColor);
+    }
+
+    .container {
+        max-width: 830px;
+        max-height: 932px;
+    }
+
+    #joinIntroLogo,
+    #logoSignUpLogo {
+        width: 64px;
+        height: 78px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        width: 100px;
+        height: 122px;
+    }
+
+    .bg-logo {
+        position: absolute;
+        background-color: var(--globalColorPrime);
+        width: 100%;
+        height: 100%;
+        z-index: 70;
+    }
+
+    .content-header-title {
+        font-size: 47px;
+        display: flex;
+        gap: 16px
+    }
+
+    .content-header-title-underline {
+        width: 88px;
+    }
+
+    .content {
+        padding: 32px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .content-header-arrow {
+        position: absolute;
+        left: 40px;
+        top: 46px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    .header {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 85%;
+        z-index: 30;
+    }
+
+    .logoSignUpLogo {
+        max-width: 64px;
+        max-height: 78px;
+    }
+
+    .logoSignUp {
+        top: 37px;
+        left: 38px;
+    }
+
+    .sign-up {
+        margin: 0px;
+        height: max-content;
+    }
+
+    .inputFields {
+        width: 90%;
+    }
+
+    .content-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .submit {
+        display: flex;
+        width: 180px;
+        height: 51px;
+        padding: 4px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 21px;
+    }
+
+    .guestLogin {
+        display: flex;
+        width: 180px;
+        height: 51px;
+        padding: 4px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 22px;
+        left: 0;
+        right: 0;
+        gap: 16px;
+    }
+}

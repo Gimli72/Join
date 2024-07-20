@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    background-color: var(--globalBgColor);
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+}
