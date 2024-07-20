@@ -1,5 +1,3 @@
-# ***devAka_m10_joinGruppe25***
----
 ## Join - Gruppenarbeit Modul 10
 ## Gruppe 25
   
